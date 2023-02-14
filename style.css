@@ -1,0 +1,137 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: white;
+    height: 15vh;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.header > h1 {
+    font-size: 42px;
+}
+body,
+html {
+    margin: 0;
+    padding: 0;
+    background-color: blanchedalmond;
+}
+#addbook {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+}
+
+.window {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 150ms ease-in-out;
+    border: solid 1px black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: rgb(225, 231, 236);
+    width: 330px;
+    height: 60vh;
+    max-width: 80%;
+}
+
+.window.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.window-header {
+    padding: 20px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.window-header .window-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    display: flex;
+    justify-self: center;
+}
+
+.window-header .window-close {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.75rem;
+    font-weight: bolder;
+}
+
+.window-body {
+    padding: 10px 15px;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.514);
+    pointer-events: none;
+    transition: 200ms ease-in-out;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+button {
+    padding: 12px 25px;
+    font-family: 'Verdana, Geneva, Tahoma, sans-serif';
+    font-weight: bold;
+    font-size: x-large;
+    border: none;
+}
+
+#log-in-button {
+    border-radius: 7px;
+    cursor: pointer;
+}
+#log-in-button:hover {
+    background-color: rgb(217, 222, 226);
+}
+
+[data-window-target] {
+    background: none;
+    font-weight: bolder;
+    font-size: xx-large;
+    border-radius: 7px;
+}
+
+[data-window-target]:hover {
+    background-color: rgb(236, 224, 206);
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    align-items: center;
+}
+input {
+    padding: 10px;
+    font-size: large;
+    width: 270px;
+    border-radius: 5px;
+    border: none;
+}
+
+input:focus {
+    border: none;
+    outline: none;
+}
